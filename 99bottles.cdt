@@ -1,0 +1,7 @@
+;99 bottles example
+;Copyright (C) 1996-2010 Paul Equinox Collins. 
+;Copied verbatim from http://equ.in/ox/comp/obfuscated/condit/
+when a=0 then set a=99
+when a>0 then put a put " bottles of beer on the wall\n" put a put " bottles of beer\n" put "Take one down, pass it around\n" set a=a-1 put a put " bottles of beer on the wall\n\n"
+when a=1 then put "1 bottle of beer on the wall\n1 bottle of beer\nTake one down, pass it around\nNo more bottles of beer on the wall\n" set a=-1
+

@@ -1,0 +1,9 @@
+;Guessing Game
+;Copyright (C) 1996-2010 Paul Equinox Collins. 
+;Copied verbatim from http://equ.in/ox/comp/obfuscated/condit/
+when a=0 then set x=rnd(49)+1 put "Guess the number between 1 and 50.\n" set a=1
+when a=1 then set tries=tries+1 get guess set R="it!"
+when guess<x then set R="too low."
+when guess>x then set R="too high."
+when a=1 then put "That's "+R+"\n" set j=guess-x+1
+when j=1 then put "You got it in " put tries put ".\n" set a=2 set j=2

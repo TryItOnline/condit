@@ -1,0 +1,20 @@
+;Test file I/O facilities.
+
+;Test input from file
+when a=0 then get #"input.txt" a
+when a=1 then put "Get from files works.\n" set a=-1
+
+;Test input from stdin
+when b=0 then put "Enter 5:" get b
+when b=5 then put "Plain get works.\n" set b=-1
+
+;Test output to file
+when c=0 then put #"output.txt" 3 set c=1
+when c=1 then get #"output.txt" c
+when c=3 then put "Put to files works.\n" set c=-1
+
+;Test EOF
+when (d=0) and eof("input.txt")=0 then get #"input.txt" B put "Reading lines from get..." put "Read line " put B put "\n"
+when eof("input.txt")=1 and (d=-1)=0 then put "EOF works.\n" set d=-1
+
+

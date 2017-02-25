@@ -1,0 +1,5 @@
+;Test whether basic string variables work.
+
+when A="" then set A="a"
+when A="a" then set A="-" put "String variables work.\n"
+

@@ -1,0 +1,5 @@
+;Tests whether plain numerical variables work.
+
+when a=0 then set a=99
+when a=99 then set a=-1 put "Numerical variables work.\n"
+

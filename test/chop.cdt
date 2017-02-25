@@ -1,0 +1,27 @@
+;Test whether chop() works properly.
+
+;Non-array version, strings
+when A="" then set A="1234567890"
+when d=0 then set B=Chop(A,-3) set d=1
+when d=1 and B="890" then set d=-1 put "Chop, non-array, works right.\n"
+when d=1 and (B="890")=0 then set d=-1 put "Chop failed.\n" put B
+
+
+;Array version, strings
+when [2]C="" then set [2]C="1234567890"
+when e=0 then set D=Chop([2]C,3) set e=1
+when e=1 and D="123" then set e=-2 put "Chop, array, works right.\n"
+when e=1 and (D="123")=0 then set e=-2 put "Chop, array, failed.\n"
+
+
+;Non-array version, numbers.
+when E="" then set E="1234567890"
+when f=0 then set f=1 set g=chop(E,-2)
+when g=90 then set g=-1 put "chop, non-array, numbers works right.\n"
+
+;Array version, numbers
+when [2]F="" then set [2]F="1234567890"
+when i=0 then set h=chop([2]F,3) set i=1
+when i=1 and h=123 then set i=-2 put "Chop, array with numbers, works right.\n"
+when i=1 and (h=123)=0 then set i=-2 put "Chop, array, failed.\n"
+

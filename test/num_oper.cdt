@@ -1,0 +1,35 @@
+;Test numerical operators
+
+;Test for functionality
+when add=0 then set add=add+1
+when add=1 then set add=-1 put "Operator + works.\n"
+
+when sub=0 then set sub=sub-1
+when sub=-1 then set sub=1 put "Operator - works.\n"
+
+when times=0 then set times=1
+when times=1 then set times=times*3
+when times=3 then set times=4 put "Operator * works.\n"
+
+when div=0 then set div=10
+when div=10 then set div=div/2
+when div=5 then set div=-1 put "Operator / works.\n"
+
+when les<3 then set les=les+1
+when les=3 then set les=4 put "Operator < works.\n"
+
+when grat>-3 then set grat=grat-1
+when grat=-3 then set grat=-4 put "Operator > works.\n"
+
+when a=0 then set a=1
+when a=1 and 1 then set a=-1 put "Operator and works.\n"
+
+when o=0 then set o=1
+when o=1 or 0 then set o=-1 put "Operator or works.\n"
+
+
+;Test for obvious abnormalities
+when 0<-1 then put "Error - 0<-1"
+when 0>1 then put "Error - 0>1"
+when 0=1 then put "Error 0=1"
+

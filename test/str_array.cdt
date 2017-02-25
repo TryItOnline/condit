@@ -1,0 +1,4 @@
+;Test the functioning of string arrays
+
+when [3]A="" then set [3]A="a"
+when [3]A="a" then set [3]A="-" put "String Arrays work.\n"

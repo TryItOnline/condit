@@ -1,0 +1,6 @@
+;Test numerical arrays.
+
+when [3]a=0 then set [3]a=99
+when [3]a=99 then set [3]a=-1 put "Numerical arrays work.\n"
+
+
